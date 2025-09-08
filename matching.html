@@ -1,0 +1,68 @@
+<div class="section-header">
+    <h1>Property Matching System</h1>
+    <button class="btn-primary">Create Match Alert</button>
+</div>
+<div class="matching-filters">
+    <div class="filter-group">
+        <label>Client:</label>
+        <select id="clientSelect">
+            <option value="">Select Client</option>
+            <option value="1">John Smith</option>
+            <option value="2">Sarah Johnson</option>
+            <option value="3">Michael Brown</option>
+            <option value="4">Emily Davis</option>
+            <option value="5">Robert Wilson</option>
+        </select>
+    </div>
+    <div class="filter-group">
+        <label>Budget Range:</label>
+        <input type="range" id="budgetRange" min="100000" max="1000000" value="500000">
+        <span id="budgetValue">$500,000</span>
+    </div>
+    <button class="btn-secondary" onclick="findMatches()">Find Matches</button>
+</div>
+<div class="matches-results">
+    <h3>Matching Properties for John Smith</h3>
+    <div class="match-item">
+        <div class="match-score">95%</div>
+        <div class="match-details">
+            <h4>Modern Apartment</h4>
+            <p>$450,000 • 120 m² • 3 bed • 2 bath</p>
+            <div class="match-criteria">
+                ✓ Within budget ✓ Preferred area ✓ Bedroom count
+            </div>
+        </div>
+        <div class="match-actions">
+            <button class="btn-small">Send to Client</button>
+            <button class="btn-small">Schedule Viewing</button>
+        </div>
+    </div>
+    <div class="match-item">
+        <div class="match-score">87%</div>
+        <div class="match-details">
+            <h4>Downtown Condo</h4>
+            <p>$320,000 • 85 m² • 2 bed • 1 bath</p>
+            <div class="match-criteria">
+                ✓ Within budget ✓ Preferred area ✗ Bedroom count
+            </div>
+        </div>
+        <div class="match-actions">
+            <button class="btn-small">Send to Client</button>
+            <button class="btn-small">Schedule Viewing</button>
+        </div>
+    </div>
+    <div class="match-item">
+        <div class="match-score">78%</div>
+        <div class="match-details">
+            <h4>Suburban Villa</h4>
+            <p>$850,000 • 280 m² • 5 bed • 4 bath</p>
+            <div class="match-criteria">
+                ✗ Over budget ✓ Preferred area ✓ Bedroom count
+            </div>
+        </div>
+        <div class="match-actions">
+            <button class="btn-small">Send to Client</button>
+            <button class="btn-small">Schedule Viewing</button>
+        </div>
+    </div>
+</div>

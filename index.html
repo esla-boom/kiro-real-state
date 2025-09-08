@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>Real Estate</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="menu-item active" data-page="home.html">
+                    <span class="icon">🏡</span>
+                    Home
+                </li>
+                <li class="menu-item" data-page="properties.html">
+                    <span class="icon">🏠</span>
+                    Properties
+                </li>
+                <li class="menu-item" data-page="clients.html">
+                    <span class="icon">👥</span>
+                    Clients
+                </li>
+                <li class="menu-item" data-page="analytics.html">
+                    <span class="icon">📊</span>
+                    Analytics
+                </li>
+                <li class="menu-item" data-page="add-property.html">
+                    <span class="icon">➕</span>
+                    Add Property
+                </li>
+                <li class="menu-item" data-page="calendar.html">
+                    <span class="icon">📅</span>
+                    Calendar
+                </li>
+                <li class="menu-item" data-page="documents.html">
+                    <span class="icon">📁</span>
+                    Documents
+                </li>
+                <li class="menu-item" data-page="financial.html">
+                    <span class="icon">💰</span>
+                    Financial
+                </li>
+                <li class="menu-item" data-page="matching.html">
+                    <span class="icon">🎯</span>
+                    Property Matching
+                </li>
+                <li class="menu-item" data-page="reports.html">
+                    <span class="icon">📊</span>
+                    Reports
+                </li>
+                <li class="menu-item" data-page="map.html">
+                    <span class="icon">🗺️</span>
+                    Map View
+                </li>
+                <li class="menu-item" data-page="manage-users.html">
+                    <span class="icon">⚙️</span>
+                    Manage Users
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div id="content-container">
+                <!-- Content will be loaded here dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Appointments -->
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAppointmentModal()">&times;</span>
+            <h2>Schedule Appointment</h2>
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label>Appointment Type:</label>
+                    <select name="type" required>
+                        <option value="viewing">Property Viewing</option>
+                        <option value="meeting">Client Meeting</option>
+                        <option value="inspection">Property Inspection</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Date:</label>
+                        <input type="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Time:</label>
+                        <input type="time" name="time" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Client:</label>
+                    <select name="client" required>
+                        <option value="">Select Client</option>
+                        <option value="1">John Smith</option>
+                        <option value="2">Sarah Johnson</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Property:</label>
+                    <select name="property">
+                        <option value="">Select Property</option>
+                        <option value="1">Modern Apartment</option>
+                        <option value="2">Family House</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Schedule</button>
+                    <button type="button" class="btn-secondary" onclick="closeAppointmentModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

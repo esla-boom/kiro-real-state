@@ -1,0 +1,51 @@
+<div class="section-header">
+    <h1>Reports & Analytics</h1>
+    <button class="btn-primary">Generate Report</button>
+</div>
+<div class="report-filters">
+    <div class="filter-row">
+        <select id="reportType">
+            <option value="sales">Sales Report</option>
+            <option value="properties">Property Report</option>
+            <option value="clients">Client Activity Report</option>
+            <option value="financial">Financial Report</option>
+        </select>
+        <input type="date" id="startDate" value="2024-12-01">
+        <input type="date" id="endDate" value="2024-12-31">
+        <button class="btn-secondary" onclick="generateReport()">Generate</button>
+    </div>
+</div>
+<div class="report-preview">
+    <h3>Sales Report - December 2024</h3>
+    <div class="report-stats">
+        <div class="stat-item">
+            <span class="stat-label">Total Sales:</span>
+            <span class="stat-value">$2,400,000</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Properties Sold:</span>
+            <span class="stat-value">8</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Average Price:</span>
+            <span class="stat-value">$300,000</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Commission Earned:</span>
+            <span class="stat-value">$72,000</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Active Listings:</span>
+            <span class="stat-value">23</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Conversion Rate:</span>
+            <span class="stat-value">68%</span>
+        </div>
+    </div>
+    <div class="report-actions">
+        <button class="btn-secondary">Export PDF</button>
+        <button class="btn-secondary">Export Excel</button>
+        <button class="btn-secondary">Email Report</button>
+    </div>
+</div>
