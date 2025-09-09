@@ -75,6 +75,27 @@
         </main>
     </div>
 
+    <!-- Location Picker Modal -->
+    <div id="locationPickerModal" class="location-picker-modal">
+        <div class="location-picker-content">
+            <div class="location-picker-header">
+                <h2>Select Property Location</h2>
+                <span class="close" onclick="closeLocationPicker()">&times;</span>
+            </div>
+            <div class="location-picker-map" id="locationPickerMap" onclick="selectLocationOnMap(event)">
+                <p>🗺️ Click anywhere on this map to select coordinates</p>
+                <p>Selected coordinates will appear below</p>
+                <div class="location-coordinates" id="selectedCoordinates" style="display: none;">
+                    Lat: <span id="selectedLat">0</span>, Lng: <span id="selectedLng">0</span>
+                </div>
+            </div>
+            <div class="location-picker-actions">
+                <button type="button" class="btn-secondary" onclick="closeLocationPicker()">Cancel</button>
+                <button type="button" class="btn-primary" onclick="confirmLocationSelection()">Use This Location</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal for Appointments -->
     <div id="appointmentModal" class="modal">
         <div class="modal-content">

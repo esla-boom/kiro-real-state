@@ -13,34 +13,14 @@
     <div id="propertyMap" class="map-placeholder">
         <p>🗺️ Interactive Map View</p>
         <p>Property locations would be displayed here</p>
-        <div class="map-markers">
-            <div class="map-marker" style="top: 30%; left: 40%;">
-                <span class="marker-pin">📍</span>
-                <div class="marker-popup">
-                    <strong>Modern Apartment</strong><br>
-                    $450,000 • Available
-                </div>
-            </div>
-            <div class="map-marker" style="top: 60%; left: 70%;">
-                <span class="marker-pin">📍</span>
-                <div class="marker-popup">
-                    <strong>Family House</strong><br>
-                    $680,000 • Available
-                </div>
-            </div>
-            <div class="map-marker" style="top: 45%; left: 25%;">
-                <span class="marker-pin">📍</span>
-                <div class="marker-popup">
-                    <strong>Downtown Condo</strong><br>
-                    $320,000 • Available
-                </div>
-            </div>
-            <div class="map-marker" style="top: 75%; left: 55%;">
-                <span class="marker-pin">📍</span>
-                <div class="marker-popup">
-                    <strong>Suburban Villa</strong><br>
-                    $850,000 • Pending
-                </div>
+        <div class="map-markers" id="mapMarkers">
+            <!-- Markers will be generated dynamically based on property coordinates -->
+        </div>
+        <div class="map-info">
+            <p><strong>Interactive Property Map</strong></p>
+            <p>Properties are positioned based on their latitude/longitude coordinates</p>
+            <div class="coordinate-display">
+                <small>Hover over markers to see property details</small>
             </div>
         </div>
     </div>
